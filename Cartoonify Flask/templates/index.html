@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoonify App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+    
+</head>
+<body>
+<div class="container">
+    <h1>Cartoonify App</h1>
+    <p>Transform your photos into cool cartoons!</p>
+    <form action="/cartoonify" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <div class="label-container">
+            <label for="fileInput">Select an image</label>
+            <input type="file" name="file" id="fileInput" accept="image/*" onchange="updateLabel()">
+        </div>
+        <div class="button-container">
+            <button type="submit" id="cartoonifyBtn">Cartoonify</button>
+        </div>
+    </form>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/prathmeshjadhav10" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram Logo">
+        </a>
+        <a href="https://www.facebook.com/prathmesh.jadhav.1023" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook Logo">
+        </a>
+        <a href="https://github.com/prathmeshj908/prathmeshj908" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub Logo">
+        </a>
+    </div>
+</div>  
+<div class="snowfall">
+    <!-- Add snowflakes dynamically using JavaScript -->
+</div>
+<script src="{{ url_for('static', filename='script1.js') }}" defer></script>  
+</body>
+</html>

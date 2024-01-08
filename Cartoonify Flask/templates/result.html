@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoonify Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+</head>
+<body>
+<div class="container">
+    <img src="data:image/jpeg;base64,{{ cartoon_base64 }}" alt="Cartoonified Image">
+    <br>
+    <a href="/download/{{ cartoon_base64 }}" download>Download Cartoonified Image</a>
+</div>
+
+<div class="card-inner">
+    <div class="front-face"></div>
+    <div class="back-face"></div>
+</div>
+<div class="footer">
+    <p>&copy; 2023 Prathmesh Krishnath Jadhav. All rights reserved.</p>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

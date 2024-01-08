@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #283048, #859398);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: fadeInUp 0.8s ease-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    animation: scaleIn 0.8s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.download-link {
+    display: inline-block;
+    padding: 15px 30px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #66a6ff, #4d94ff);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Added color transition */
+    animation: complexAnimation 2s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes complexAnimation {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: rotate(90deg) scale(1.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+        opacity: 0.6;
+    }
+    75% {
+        transform: rotate(270deg) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+    }
+}
+
+.download-link:hover {
+    background: linear-gradient(to right, #4d94ff, #66a6ff);
+    transform: scale(1.05) rotate(15deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #fff; /* Change text color on hover */
+}
+
+/* Gradient overlay on hover */
+.download-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)); /* Adjust the gradient as needed */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.download-link:hover::before {
+    opacity: 1;
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #394240;
+    color: #ccd1d1;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 12px;
+    animation: colorChange 2s infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes colorChange {
+    0% {
+        background: #394240;
+    }
+    50% {
+        background: #485a61;
+    }
+    100% {
+        background: #394240;
+    }
+}
+
+.footer:hover {
+    transform: scale(1.02);
+}
+
+/* Parallax scrolling effect on the body */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('parallax.jpg') center/cover no-repeat fixed;
+    opacity: 0.1;
+}
+
+
+
+
+
+
